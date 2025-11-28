@@ -1,0 +1,131 @@
+/* CSS Reset and Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color palette */
+  --color-bg-primary: #0a0e27;
+  --color-bg-secondary: #1a1f3a;
+  --color-bg-tertiary: #252b48;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --color-border: #3a4266;
+  --color-accent: #00d9ff;
+  --color-success: #00ff88;
+  --color-warning: #ffaa00;
+  --color-danger: #ff4466;
+
+  /* Tetromino colors */
+  --color-tetromino-i: #00f0f0;
+  --color-tetromino-o: #f0f000;
+  --color-tetromino-t: #a000f0;
+  --color-tetromino-s: #00f000;
+  --color-tetromino-z: #f00000;
+  --color-tetromino-j: #0000f0;
+  --color-tetromino-l: #f0a000;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    sans-serif;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.game-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.game-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+.game-main {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Button styles */
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+.btn--primary:hover {
+  background: var(--color-success);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+/* Keyboard key styles */
+kbd {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-size: var(--font-size-small);
+  font-family: monospace;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

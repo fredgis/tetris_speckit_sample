@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Classic Tetris game - Play the timeless puzzle game" />
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <link rel="stylesheet" href="css/ui.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">Tetris</h1>
+      </header>
+
+      <main class="game-main">
+        <aside class="sidebar sidebar--left">
+          <section class="panel panel--controls">
+            <h2 class="panel__title">Controls</h2>
+            <ul class="controls-list">
+              <li class="controls-list__item"><kbd>←</kbd> <kbd>→</kbd> Move</li>
+              <li class="controls-list__item"><kbd>↑</kbd> Rotate</li>
+              <li class="controls-list__item"><kbd>↓</kbd> Soft Drop</li>
+              <li class="controls-list__item"><kbd>Space</kbd> Hard Drop</li>
+              <li class="controls-list__item"><kbd>P</kbd> Pause</li>
+            </ul>
+          </section>
+        </aside>
+
+        <div class="board-container">
+          <canvas id="game-board" class="game-board" width="300" height="600"></canvas>
+
+          <div id="game-over-overlay" class="overlay overlay--game-over" hidden>
+            <div class="overlay__content">
+              <h2 class="overlay__title">Game Over</h2>
+              <p class="overlay__score">Final Score: <span id="final-score">0</span></p>
+              <button id="restart-button" class="btn btn--primary">Restart Game</button>
+            </div>
+          </div>
+
+          <div id="pause-overlay" class="overlay overlay--pause" hidden>
+            <div class="overlay__content">
+              <h2 class="overlay__title">Paused</h2>
+              <p class="overlay__text">Press P to resume</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <section class="panel panel--next-piece">
+            <h2 class="panel__title">Next Piece</h2>
+            <canvas
+              id="next-piece-canvas"
+              class="next-piece-canvas"
+              width="120"
+              height="120"
+            ></canvas>
+          </section>
+
+          <section class="panel panel--stats">
+            <h2 class="panel__title">Stats</h2>
+            <div class="stat">
+              <span class="stat__label">Score:</span>
+              <span id="score-display" class="stat__value">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat__label">Level:</span>
+              <span id="level-display" class="stat__value">1</span>
+            </div>
+            <div class="stat">
+              <span class="stat__label">Lines:</span>
+              <span id="lines-display" class="stat__value">0</span>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

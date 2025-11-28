@@ -1,0 +1,37 @@
+{
+  "name": "tetris-game",
+  "version": "1.0.0",
+  "description": "Classic Tetris game built with vanilla JavaScript, HTML5 Canvas, and CSS3",
+  "main": "js/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint js/**/*.js tests/**/*.js",
+    "lint:fix": "eslint js/**/*.js tests/**/*.js --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "tetris",
+    "game",
+    "javascript",
+    "html5",
+    "canvas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^2.8.0",
+    "serve": "^14.2.0"
+  }
+}

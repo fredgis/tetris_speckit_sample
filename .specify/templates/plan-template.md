@@ -31,7 +31,56 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### I. Code Quality Compliance
+
+- [ ] Naming conventions defined for this domain/technology
+- [ ] Linting/formatting tools configured
+- [ ] Code review checklist includes quality standards
+- [ ] Documentation requirements clear (inline comments, user docs)
+- [ ] DRY and single responsibility principles planned into design
+
+**Status**: [✅ PASS / ⚠️ NEEDS ATTENTION / ❌ VIOLATION - see Complexity Tracking]
+
+### II. Testing Standards Compliance
+
+- [ ] TDD workflow planned (tests before implementation)
+- [ ] Contract tests identified for all public APIs/interfaces
+- [ ] Integration tests identified for user journeys
+- [ ] Unit tests planned for complex business logic
+- [ ] Test automation strategy defined
+- [ ] Coverage targets set (80%+ for critical paths)
+
+**Status**: [✅ PASS / ⚠️ NEEDS ATTENTION / ❌ VIOLATION - see Complexity Tracking]
+
+### III. User Experience Consistency Compliance
+
+- [ ] User stories prioritized (P1, P2, P3...)
+- [ ] Each user story independently testable
+- [ ] Acceptance criteria in Given-When-Then format
+- [ ] Error handling strategy defined (clear, actionable messages)
+- [ ] Accessibility requirements identified (if applicable)
+- [ ] Design consistency maintained (if UI involved)
+- [ ] User documentation planned
+
+**Status**: [✅ PASS / ⚠️ NEEDS ATTENTION / ❌ VIOLATION - see Complexity Tracking]
+
+### IV. Performance Requirements Compliance
+
+- [ ] Performance targets explicitly defined (response times, throughput, etc.)
+- [ ] Appropriate data structures/algorithms selected for scale
+- [ ] Async/background processing planned for blocking operations
+- [ ] Pagination/lazy loading planned for large datasets
+- [ ] Performance regression tests identified
+- [ ] Memory and resource limits defined
+- [ ] Load testing strategy defined (if concurrent usage expected)
+
+**Status**: [✅ PASS / ⚠️ NEEDS ATTENTION / ❌ VIOLATION - see Complexity Tracking]
+
+### Overall Constitution Compliance
+
+**Overall Status**: [✅ ALL PASS / ⚠️ NEEDS WORK / ❌ VIOLATIONS REQUIRE JUSTIFICATION]
+
+**Notes**: [Any additional context or decisions]
 
 ## Project Structure
 
